@@ -6,11 +6,14 @@ body {
 
 /* Sidebar */
 .sidebar {
-    width: 50px;
-    height: 50vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 100vh;
     background: #2c3e40;
     color: white;
-    padding: 20px;
+    padding-top: 20px;
 }
 
 .sidebar h2 {
@@ -24,6 +27,7 @@ body {
 
 .sidebar ul li {
     padding: 15px;
+    color: white;
     cursor: pointer;
     border-bottom: 1px solid #444;
 }
@@ -35,6 +39,7 @@ body {
 /* Main */
 .main {
     flex: 1;
+    margin-left: 200px;
     padding: 20px;
     background: #ecf0f1;
 }

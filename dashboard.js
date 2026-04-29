@@ -33,6 +33,61 @@ function addLab() {
     input.value = "";
 }
 
+
+// Sample Data (tum backend se bhi laa sakte ho)
+
+// Show All Resources
+function showResources() {
+    let list = document.getElementById("dataList");
+    list.innerHTML = "";
+
+    resources.forEach(res => {
+        let li = document.createElement("li");
+        li.innerHTML = `${res.name} (${res.type}) - 
+            ${res.booked ? "Booked" : "Available"}`;
+        list.appendChild(li);
+    });
+}
+
+// Show Only Available Resources
+function showAvailable() {
+    let list = document.getElementById("dataList");
+    list.innerHTML = "";
+
+    let available = resources.filter(res => !res.booked);
+
+    available.forEach(res => {
+        let li = document.createElement("li");
+        li.innerHTML = `${res.name} (${res.type}) - Available`;
+        list.appendChild(li);
+    });
+}
+
+// Show Booked Resources
+function showBooking() {
+    let list = document.getElementById("dataList");
+    list.innerHTML = "";
+
+    let booked = resources.filter(res => res.booked);
+
+    booked.forEach(res => {
+        let li = document.createElement("li");
+        li.innerHTML = `${res.name} (${res.type}) - Booked by ${res.user}`;
+        list.appendChild(li);
+    });
+}
+
+// Logout
+function logout() {
+    alert("Logged out!");
+    window.location.href = "index.html";
+}
+
+
+
+
+
+
 // Logout
 function logout() {
     alert("Logged out!");
