@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>Smart Campus</h2>
+    <ul>
+         <li onclick="showSection('home')">Dashboard</li>
+        <li onclick="showSection('classroom')">Classrooms</li>
+        <li onclick="showSection('lab')">Labs</li>
+        <li onclick="logout()">Logout</li>
+    </ul>
+</div>
+
+<div class="main">
+
+    
+    <div id="home" class="section">
+        <h1>Dashboard</h1>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Total Classrooms</h3>
+                <p id="totalClassrooms">10</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Labs</h3>
+                <p id="totalLabs">10</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="classroom" class="section hidden">
+        <h2>Classroom Management</h2>
+
+        <input type="text" id="classroomInput" placeholder="Enter Classroom Name">
+        <button onclick="addClassroom()">Add</button>
+
+        <ul id="classroomList"></ul>
+    </div>
+
+    <div id="lab" class="section hidden">
+        <h2>Lab Management</h2>
+
+        <input type="text" id="labInput" placeholder="Enter Lab Name">
+        <button onclick="addLab()">Add</button>
+
+        <ul id="labList"></ul>
+    </div>
+
+</div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>
+
+<button onclick="showResources()">Show Resources</button>
+<button onclick="showBookings()">Show Bookings</button>
+<button onclick="showAvailable()">Show Available</button>
+
+<h3>Book Lab/Classroom</h3>
+<input id="name" placeholder="Your Name">
+<input id="rid" placeholder="Resource ID">
+<input id="date" type="date">
+<input id="start" placeholder="Start Hour">
+<input id="end" placeholder="End Hour">
+<button onclick="bookResource()">Book</button>
+
+<pre id="output"></pre>

@@ -1,0 +1,73 @@
+body {
+    font-family: Arial;
+    background: linear-gradient(135deg, #74ebd5, #9face6);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 500px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.input-section {
+    margin-bottom: 15px;
+}
+
+input {
+    padding: 10px;
+    width: 60%;
+    margin: 5px;
+}
+
+button {
+    padding: 10px 15px;
+    background: #3498db;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #ecf0f1;
+    padding: 10px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.actions button {
+    margin-left: 5px;
+}
+
+.delete {
+    background: red;
+}
+
+.edit {
+    background:green;
+}
+
+.back-btn {
+    margin-top: 20px;
+    background: #555;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab Management</title>
+    <link rel="stylesheet" href="labs.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Lab Management</h1>
+
+    <!-- Input -->
+    <div class="input-section">
+        <input type="text" id="labInput" placeholder="Enter Lab Name">
+        <button onclick="addLab()">Add Lab</button>
+    </div>
+
+    <!-- Search -->
+    <input type="text" id="searchBox" placeholder="Search Lab..." onkeyup="searchLab()">
+
+    <!-- Count -->
+    <p>Total Labs: <span id="labCount">0</span></p>
+
+    <!-- List -->
+    <ul id="labList"></ul>
+
+    <button class="back-btn" onclick="goBack()">Back</button>
+</div>
+
+<script src="labs.js"></script>
+</body>
+</html>
